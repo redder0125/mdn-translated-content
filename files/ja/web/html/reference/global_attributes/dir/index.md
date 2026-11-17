@@ -1,5 +1,5 @@
 ---
-title: "`dir` グローバル属性 (HTML)"
+title: "`dir` グローバル属性"
 short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 l10n:
@@ -102,9 +102,7 @@ Firefox は <kbd>Ctrl</kbd> (Windows)/<kbd>Cmd</kbd> (macOS) + <kbd>Shift</kbd> 
 
 ```html
 <p dir="ltr" lang="en">This sentence is in English and reads left to right.</p>
-<p dir="rtl" lang="ar">
-  هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.
-</p>
+<p dir="rtl" lang="ar">هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.</p>
 ```
 
 ### インラインの双方向テキスト

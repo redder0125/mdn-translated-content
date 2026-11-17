@@ -6,9 +6,9 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
 
-이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
+이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 
 게임의 기능들을 작성하기 전에, 게임 내부에 렌더링 하기 위한 기본 구조들을 HTML과 {{htmlelement("canvas")}} 엘리먼트를 사용하여 만들어야 합니다.
 
@@ -102,9 +102,42 @@ ctx.closePath();
 
 ## 여러분의 코드와 비교해 보세요
 
-JSFiddle에서 라이브로 실행되는 전체 코드입니다.
+라이브로 실행되는 전체 코드입니다.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(160, 10, 100, 40);
+ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.stroke();
+ctx.closePath();
+```
+
+{{EmbedLiveSample("여러분의 코드와 비교해 보세요", 600, 340)}}
 
 > [!NOTE]
 > **연습해보기**: 주어진 모양들의 크기와 색상을 변경해보세요.
@@ -113,4 +146,4 @@ JSFiddle에서 라이브로 실행되는 전체 코드입니다.
 
 이제 우리는 기본적인 HTML을 설정하고, canvas에 대해 조금 배웠습니다. 두 번째 챕터로 넘어가서 [게임에서 공을 움직이기](/ko/docs/Games/Tutorials/%EC%88%9C%EC%88%98%ED%95%9C_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_2D_%EB%B2%BD%EB%8F%8C%EA%B9%A8%EA%B8%B0_%EA%B2%8C%EC%9E%84/%EA%B3%B5_%EC%9B%80%EC%A7%81%EC%9D%B4%EA%B8%B0)위해 어떻게 해야 하는지 계속 알아봅시다.
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
